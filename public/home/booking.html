@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADD ROOM FORM</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('images/blog_1.jpg') center/cover no-repeat;
+      height: 120vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #reservation-form {
+      background-color: #fff;
+      padding: 30px; /* Ajustez la marge intérieure pour rendre le formulaire plus grand */
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      width: 70%; /* Ajustez la largeur du formulaire */
+      max-width: 500px; /* Définissez une largeur maximale pour le formulaire */
+      margin: 20px; /* Ajoutez une marge pour l'esthétique */
+    }
+
+    #reservation-form label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    #reservation-form input,
+    #reservation-form select {
+      width: calc(100% - 22px); /* Ajustez la largeur des champs de saisie */
+      padding: 10px;
+      margin: 5px 0 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    #reservation-form input[type="file"] {
+      cursor: pointer;
+    }
+
+    #reservation-form button {
+      background-color: #ffa37b;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #reservation-form button:hover {
+      background-color: #ff704d;
+    }
+
+    /* Highlight input field on click */
+    #reservation-form input:focus,
+    #reservation-form select:focus {
+      outline: 2px solid #ffa37b;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="reservation-form">
+    <h2 style="text-align: center; color: #ffa37b;">Add Room Form</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="room-type">Room Type:</label>
+      <select id="room-type" name="roomType" required>
+        <option value="Single Room">Single Room</option>
+        <option value="Family Room">Family Room</option>
+      </select>
+
+      <label for="price">Price (with currency):</label>
+      <input type="text" id="price" name="price" required>
+      <select name="currency">
+        <option value="$">USD</option>
+        <option value="€">EUR</option>
+        <!-- Add more currencies as needed -->
+      </select>
+
+      <label for="hotel-name">Hotel Name:</label>
+      <input type="text" id="hotel-name" name="hotelName" required>
+
+      <label for="image">Upload Image:</label>
+      <input type="file" id="image" name="image" accept="image/*" required>
+
+      <button type="button" onclick="validateForm()">Add up</button>
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+      // Add JavaScript validation logic here
+      alert("Form validated. Submitting data (Note: File upload not handled in this example).");
+    }
+  </script>
+
+</body>
+</html>
+
